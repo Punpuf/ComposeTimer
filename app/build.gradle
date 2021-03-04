@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-parcelize'    
 }
 
 android {
@@ -52,7 +53,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerExtensionVersion composeVersion
     }
 
     packagingOptions {
@@ -64,18 +65,42 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation "androidx.activity:activity-compose:1.3.0-alpha03"
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.material:material-icons-extended:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
 
-    testImplementation 'junit:junit:4.13.2'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.4.30'
+    def accompanistVersion = "0.6.0"
+    implementation "dev.chrisbanes.accompanist:accompanist-coil:$accompanistVersion"
+    implementation "dev.chrisbanes.accompanist:accompanist-insets:$accompanistVersion"
 
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    //implementation "org.jetbrains.kotlin:kotlin-android-extensions:$kotlinVersion"
+
+    def coroutinesVersion = "1.4.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    //implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    def androidXVersion = "1.5.0-beta02"
+    implementation "androidx.core:core-ktx:$androidXVersion"
+
+
+    implementation "androidx.compose.foundation:foundation:$composeVersion"
+    implementation "androidx.compose.foundation:foundation-layout:$composeVersion"
+    implementation "androidx.compose.ui:ui:$composeVersion"
+    implementation "androidx.compose.ui:ui-util:$composeVersion"
+    implementation "androidx.compose.runtime:runtime:$composeVersion"
+    implementation "androidx.compose.material:material:$composeVersion"
+    implementation "androidx.compose.animation:animation:$composeVersion"
+    implementation "androidx.compose.ui:ui-tooling:$composeVersion"
+    implementation "androidx.compose.material:material-icons-extended:$composeVersion"
+    implementation "androidx.compose.runtime:runtime-livedata:$composeVersion"
+
+    def activityVersion = "1.3.0-alpha03"
+    implementation "androidx.activity:activity-compose:$activityVersion"
+
+    def lifecycleVersion = "1.0.0-alpha02"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion"
+
+    def constraintLayoutVersion = "1.0.0-alpha03"
+    implementation "androidx.constraintlayout:constraintlayout-compose:$constraintLayoutVersion"
 }

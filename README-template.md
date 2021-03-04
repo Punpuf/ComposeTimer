@@ -1,17 +1,16 @@
-# Put title of your app here
+# JetTimer
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/Punpuf/ComposeTimer/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
-<!--- Describe your app in one or two sentences -->
+Select a number, and we'll count down from it to zero. One second at a time.
 
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
+The flow of information with the use of Jetpack Compose makes the app's organization very nice.
 
 
 ## :camera_flash: Screenshots
